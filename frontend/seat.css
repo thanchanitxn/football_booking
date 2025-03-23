@@ -1,0 +1,120 @@
+/* ตั้งค่าหลักของ body */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #f9f9f9; /* เพิ่มพื้นหลัง */
+    margin: 0;
+    padding: 0;
+}
+
+/* หัวข้อ */
+h1 {
+    color: #f95f5f;
+    font-size: 2rem;
+    margin-top: 40px;
+    text-transform: uppercase; /* ทำให้ตัวอักษรเป็นตัวพิมพ์ใหญ่ */
+}
+
+/* คอนเทนเนอร์ของการเลือกที่นั่ง */
+.seat-selection {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff; /* เพิ่มพื้นหลัง */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ใส่เงาให้คอนเทนเนอร์ */
+}
+
+/* โซนเลือกที่นั่ง */
+.zone-buttons {
+    margin-bottom: 20px;
+}
+
+.zone {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.zone:hover {
+    background-color: #0056b3; /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* แผนผังที่นั่ง */
+.seating-chart {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* กำหนดคอลัมน์สำหรับที่นั่ง */
+    gap: 10px;
+    margin-top: 20px;
+    justify-items: center; /* จัดที่นั่งให้อยู่ตรงกลาง */
+}
+
+.seat {
+    background-color: #4CAF50; /* สีเขียวสำหรับที่นั่งว่าง */
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.seat.selected {
+    background-color: #FFD700; /* สีเหลืองเมื่อเลือก */
+}
+
+.seat.booked {
+    background-color: #ccc; /* สีเทาสำหรับที่นั่งที่ถูกจองแล้ว */
+    cursor: not-allowed;
+}
+
+/* ปุ่มยืนยันการเลือกที่นั่ง */
+.confirm-seat {
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-seat:hover {
+    background-color: #218838; /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* แสดงราคาที่นั่ง */
+.price-display {
+    font-size: 20px;
+    color: #f95f5f;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* สไตล์สำหรับมือถือ */
+@media (max-width: 768px) {
+    .seat-selection {
+        padding: 10px;
+    }
+
+    .zone {
+        font-size: 0.9rem; /* ขนาดฟอนต์ลดลงบนมือถือ */
+    }
+
+    .seat {
+        font-size: 14px;
+    }
+
+    .confirm-seat {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ชำระเงิน</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <a href="main.html">
+                <img src="images/logo4.jpg" alt="Logo">
+            </a>
+        </div>
+        <div class="menu">
+            <a href="main.html">หน้าแรก</a>
+            <a href="booking.html">จองตั๋วฟุตบอล</a>
+            <a href="match.html">โปรแกรมการแข่งขัน</a>
+            <a href="guide.html">วิธีการจองตั๋ว</a>
+        </div>
+        <a href="login.html" class="login-btn">Login</a>
+    </div>
+
+    <div class="payment-container">
+        <h1>รายละเอียดการจองตั๋ว</h1>
+        <div id="match-details"></div>
+
+        <h2>ข้อมูลลูกค้า</h2>
+        <form id="customer-form">
+            <input type="text" id="first_name" placeholder="ชื่อ" required>
+            <input type="text" id="last_name" placeholder="นามสกุล" required>
+            <input type="email" id="email" placeholder="อีเมล" required>
+            <input type="tel" id="phone" placeholder="เบอร์โทรศัพท์" required>
+        </form>
+
+        <h2>ช่องทางการชำระเงิน</h2>
+        <div class="payment-options">
+            <label>
+                <input type="radio" name="payment-method" value="credit-card" checked>
+                💳 บัตรเครดิต/เดบิต
+            </label>
+            <label>
+                <input type="radio" name="payment-method" value="bank-transfer">
+                🏦 โอนเงินผ่านธนาคาร
+            </label>
+            <label>
+                <input type="radio" name="payment-method" value="qr-code">
+                📲 QR Code
+            </label>
+        </div>
+
+        
+<button type="button" id="confirm-payment-btn">ยืนยันการชำระเงิน</button>
+    </div>
+
+    <script src="payment.js"></script>
+
+</body>
+</html>

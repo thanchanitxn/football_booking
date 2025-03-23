@@ -1,0 +1,53 @@
+/* Header */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: #ffebe6;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #f95f5f;
+}
+
+header p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Steps */
+.steps {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.step {
+    background: #ffffff;
+    border-left: 5px solid #f95f5f;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: #f95f5f;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.step h2 {
+    font-size: 20px;
+    color: #f95f5f;
+}
+

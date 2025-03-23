@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เลือกที่นั่ง</title>
+    <link rel="stylesheet" href="navbar.css"> 
+    <link rel="stylesheet" href="seat.css"> 
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <a href="main.html">
+                <img src="images/logo4.jpg" alt="Logo">
+            </a>
+        </div>
+        <div class="menu">
+            <a href="main.html">หน้าแรก</a>
+            <a href="booking.html">จองตั๋วฟุตบอล</a>
+            <a href="match.html">โปรแกรมการแข่งขัน</a>
+            <a href="guide.html">วิธีการจองตั๋ว</a>
+        </div>
+        <a href="login.html" class="login-btn">Login</a>
+    </div>
+
+    <h1>เลือกที่นั่งสนามฟุตบอล</h1>
+    <!-- แสดงข้อมูลการแข่งขันที่ส่งมาจากหน้า booking.html -->
+    <div id="match-info">
+        <p><strong>ทีม:</strong> <span id="home-team"></span> 🆚 <span id="away-team"></span></p>
+        <p><strong>วันที่:</strong> <span id="match-date"></span></p>
+        <p><strong>เวลา:</strong> <span id="match-time"></span></p>
+        <p><strong>สนามแข่ง:</strong> <span id="stadium"></span></p>
+    </div>
+
+    <div class="seat-selection">
+        <h2>เลือกโซน</h2>
+        <div class="zone-buttons">
+            <button class="zone" data-zone="A">โซน A</button>
+            <button class="zone" data-zone="B">โซน B</button>
+            <button class="zone" data-zone="C">โซน C</button>
+        </div>
+
+        <h2>เลือกที่นั่ง</h2>
+        <div class="seating-chart">
+            <!-- แผนผังที่นั่งจะถูกเพิ่มที่นี่ -->
+        </div>
+
+        <div class="price-display">ราคาจะถูกแสดงที่นี่</div>
+
+        <button class="confirm-seat">ยืนยันที่นั่ง</button>
+    </div>
+
+    <script src="seat.js"></script> 
+
+</body>
+</html>

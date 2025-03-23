@@ -1,0 +1,113 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* คอนเทนเนอร์ของแมตช์ */
+#matches {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding:20px;
+}
+
+/* การ์ดแต่ละแมตช์ */
+.match-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    
+    /* ทำให้ข้อมูลอยู่ตรงกลาง */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+/* ทำให้การ์ดขยับเล็กน้อยเมื่อ hover */
+.match-card:hover {
+    transform: translateY(-5px);
+}
+
+/* กล่องเก็บข้อมูล */
+.match-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* ทีมที่แข่ง */
+.match-teams {
+    font-size: 20px;
+    font-weight: bold;
+    color: #dc3545;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ดีไซน์ vs */
+.match-teams span {
+    background: #ff6600;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* รายละเอียดแมตช์ */
+.match-details {
+    font-size: 16px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* ปุ่มจองตั๋ว */
+.match-card button {
+    background: #007bff;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.match-card button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive (สำหรับมือถือ) */
+@media (max-width: 768px) {
+    #matches {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .match-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .match-teams {
+        flex-direction: column;
+    }
+
+    .match-card button {
+        width: 100%;
+    }
+}

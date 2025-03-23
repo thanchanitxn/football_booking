@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จัดการข้อมูลการแข่งขัน</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <h2>เพิ่มหรือแก้ไขข้อมูลการแข่งขัน</h2>
+    <form id="addMatchForm">
+        <input type="hidden" id="matchId"> <!-- ✅ ใช้ซ่อน match_id ถ้าต้องการแก้ไข -->
+        <input type="text" id="teamHome" placeholder="ทีมเหย้า" required>
+        <input type="text" id="teamAway" placeholder="ทีมเยือน" required>
+        <input type="text" id="stadium" placeholder="สนามแข่ง" required>
+        <input type="date" id="matchDate" required>
+        <input type="time" id="matchTime" required>
+        <button type="submit">บันทึก</button>
+    </form>
+
+    <h2>รายการการแข่งขัน</h2>
+    <div id="matches">
+        <!-- แสดงรายการการแข่งขันที่ดึงมาจาก Database -->
+    </div>
+    <button id="logoutBtn">ออกจากระบบ</button>
+
+    <script src="admin.js" defer></script> 
+
+    <script>
+        
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+           
+            sessionStorage.clear(); 
+            localStorage.clear(); 
+
+            
+            window.location.href = 'admin-login.html'; 
+        });
+    </script>
+    
+</body>
+</html>

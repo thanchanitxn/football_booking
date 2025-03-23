@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ชำระเงินสำเร็จ</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="payment-success.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="main.html">
+                <img src="images/logo4.jpg" alt="Logo">
+            </a>
+        </div>
+        <div class="menu">
+            <a href="main.html">หน้าแรก</a>
+            <a href="booking.html">จองตั๋วฟุตบอล</a>
+            <a href="match.html">โปรแกรมการแข่งขัน</a>
+            <a href="guide.html">วิธีการจองตั๋ว</a>
+        </div>
+        <a href="login.html" class="login-btn">Login</a>
+    </div>
+
+    <div class="payment-success-container">
+        <div class="success-message">
+            <div class="check-icon">✔</div>
+            <h1>สำเร็จ</h1>
+            <p>คุณได้ชำระเงินเรียบร้อยแล้ว!</p>
+        </div>
+
+        <div class="ticket-details">
+            <p><strong>รายละเอียดการจอง:</strong></p>
+            <p><strong>ทีม:</strong> <span id="home-team"></span> 🆚 <span id="away-team"></span></p>
+            <p><strong>วันที่:</strong> <span id="match-date"></span></p>
+            <p><strong>เวลา:</strong> <span id="match-time"></span></p>
+            <p><strong>สนาม:</strong> <span id="stadium"></span></p>
+            <p><strong>ที่นั่งที่เลือก:</strong> <span id="seats"></span></p>
+        </div>
+
+        <button class="download-ticket-btn">ดาวน์โหลดตั๋ว</button>
+        <button class="ok-btn" onclick="window.location.href='main.html'">ตกลง</button>
+    </div>
+
+    <script src="payment-success.js"></script>
+</body>
+</html>

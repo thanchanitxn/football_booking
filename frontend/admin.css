@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #007bff;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #218838;
+}
+
+button[onclick*="editMatch"] {
+    background: #007bff;
+    margin-right: 10px;
+}
+
+button[onclick*="editMatch"]:hover {
+    background: #0056b3;
+}
+
+button[onclick*="deleteMatch"] {
+    background: #dc3545;
+}
+
+button[onclick*="deleteMatch"]:hover {
+    background: #c82333;
+}
+
+.match-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: left;
+    position: relative;
+}
+
+.match-card h3 {
+    margin: 0;
+    color: #333;
+}
+
+.match-card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.match-card button {
+    display: inline-block;
+    width: auto;
+    margin: 5px 5px 0 0;
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+/* Style สำหรับปุ่ม Logout */
+#logoutBtn {
+    background-color: #f44336; /* สีแดง */
+    color: white; /* ข้อความสีขาว */
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    width: auto; /* กำหนดให้ความยาวปุ่มไม่ยืดเต็มที่ */
+    margin: 20px auto; /* จัดกึ่งกลาง */
+    text-align: center; /* ทำให้ข้อความอยู่กลางปุ่ม */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* เปลี่ยนสีเมื่อวางเมาส์ */
+#logoutBtn:hover {
+    background-color: #d32f2f; /* สีแดงเข้ม */
+    transform: scale(1.05); /* ขยายปุ่มเล็กน้อยเมื่อเอาเมาส์ไปวาง */
+}
+
+/* เปลี่ยนสีเมื่อคลิก */
+#logoutBtn:active {
+    background-color: #b71c1c; /* สีแดงอ่อน */
+}
+

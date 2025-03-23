@@ -1,0 +1,93 @@
+/* กำหนดพื้นหลังและการตั้งค่าเบื้องต้น */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f95f5f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.navbar .logo img {
+    width: 100px;
+    height: auto;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar .menu a:hover {
+    text-decoration: underline;
+}
+
+.navbar .login-btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .login-btn:hover {
+    background-color: #27ae60;
+}
+
+/* ส่วนเนื้อหาของข่าว */
+.news-detail {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-detail h1 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.news-detail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.news-detail p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* ปรับข้อความเมื่อหน้าจอเล็กลง */
+@media (max-width: 768px) {
+    .news-detail h1 {
+        font-size: 24px;
+    }
+
+    .news-detail p {
+        font-size: 14px;
+    }
+}

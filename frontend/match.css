@@ -1,0 +1,80 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* หัวข้อ */
+h1 {
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* คอนเทนเนอร์ของแมตช์ */
+.match-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* การ์ดแต่ละแมตช์ */
+.match-card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    
+    /* ทำให้ข้อมูลอยู่ตรงกลาง */
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* จัดตรงกลางแนวนอน */
+    justify-content: center; /* จัดตรงกลางแนวตั้ง */
+    text-align: center; /* จัดข้อความตรงกลาง */
+}
+
+/* ทีมที่แข่ง */
+.match-teams {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f95f5f;
+}
+
+
+
+/* ปุ่มดูรายละเอียด */
+.match-card button {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s;
+    margin-top: 10px;
+}
+
+.match-card button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive สำหรับมือถือ */
+@media (max-width: 768px) {
+    .match-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .match-card {
+        padding: 15px;
+    }
+
+    .match-card button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,112 @@
+/* รีเซ็ตค่าพื้นฐานของ CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f95f5f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+/* โลโก้ */
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* ช่องค้นหา */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ช่องกรอกข้อความ */
+.search-box input {
+    padding: 10px 15px;
+    width: 250px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+}
+
+/* ปุ่มค้นหา */
+.search-box button {
+    background: #55c1ff;
+    border: none;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+/* ไอคอนค้นหา */
+.search-box button i {
+    color: white;
+    font-size: 18px;
+}
+
+/* เปลี่ยนสีปุ่มเมื่อ hover */
+.search-box button:hover {
+    background: #0099cc;
+}
+
+/* เมนู Navbar */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* สไตล์เมนูปกติ */
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, background 0.3s;
+}
+
+/* เมนูที่กำลังอยู่ในหน้านี้ */
+.menu a.active {
+    background: white;
+    color: #f95f5f;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* เปลี่ยนสีเมื่อ hover */
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* ปุ่ม Login */
+.login-btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: #27ae60;
+}
