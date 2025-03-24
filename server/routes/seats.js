@@ -64,7 +64,7 @@ router.post('/', (req, res) => {
     });
 });
 
-//  PUT: อัปเดตข้อมูลที่นั่งทั้งหมด สามารถอัปเดตหลายฟิลด์ได้
+//  PUT: อัปเดตข้อมูลที่นั่ง
 router.put('/:id', (req, res) => {
     const seatId = req.params.id;
     const { zone, seat_number, status, price } = req.body;
@@ -94,7 +94,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
-//  PUT: อัปเดตข้อมูลที่นั่งทั้งหมด สามารถอัปเดตหลายฟิลด์ได้
+//  PUT: อัปเดตข้อมูลที่นั่งตามเเมตช์
 router.put('/match/:match_id', (req, res) => {
     const matchId = req.params.match_id;
     const { zone, seat_number, status, price } = req.body;
