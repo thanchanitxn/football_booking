@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db/db');
 
-// ✅ GET: ดึงข้อมูลการจองทั้งหมด
+//  GET: ดึงข้อมูลการจองทั้งหมด
 router.get('/', (req, res) => {
     const sql = "SELECT * FROM bookings";
 
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// ✅ GET: ดึงข้อมูลการจองตาม booking_id
+//  GET: ดึงข้อมูลการจองตาม booking_id
 router.get('/:id', (req, res) => {
     const bookingId = req.params.id;
     const sql = "SELECT * FROM bookings WHERE booking_id = ?";
@@ -32,7 +32,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// ✅ POST: สร้างการจองใหม่
+//  POST: สร้างการจองใหม่
 router.post('/', (req, res) => {
     const { user_id, match_id, seat_ids, total_amount } = req.body;
 
@@ -51,7 +51,7 @@ router.post('/', (req, res) => {
     });
 });
 
-// ✅ PUT: อัปเดตการจอง (เช่น เปลี่ยนแปลงสถานะการชำระเงิน)
+//  PUT: อัปเดตการจอง 
 router.put('/:id', (req, res) => {
     const bookingId = req.params.id;
     const { seat_ids, total_amount, payment_status } = req.body;
@@ -81,7 +81,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
-// ✅ DELETE: ลบการจอง
+//  DELETE: ลบการจอง
 router.delete('/:id', (req, res) => {
     const bookingId = req.params.id;
     const sql = "DELETE FROM bookings WHERE booking_id = ?";

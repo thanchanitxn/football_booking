@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-//  POST: ลงทะเบียนผู้ใช้ใหม่ (Hash รหัสผ่านก่อนบันทึก)
+//  POST: ลงทะเบียนผู้ใช้ใหม่ Hash รหัสผ่านก่อนบันทึก
 router.post('/', async (req, res) => {
     const { name, email, password } = req.body;
     
@@ -61,7 +61,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-//  PUT: อัปเดตข้อมูลผู้ใช้ (อัปเดตรหัสผ่านต้อง Hash ใหม่)
+//  PUT: อัปเดตข้อมูลผู้ใช้ อัปเดตรหัสผ่านต้อง Hash ใหม่
 router.put('/:id', async (req, res) => {
     const userId = req.params.id;
     const { name, email, password } = req.body;
